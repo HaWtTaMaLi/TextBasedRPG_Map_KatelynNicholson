@@ -31,14 +31,28 @@ namespace TextBaseRPGMap_KatelynNicholson_2025_10_27
         static void Main()
         {
             DisplayMap();
-            DisplayMap(2);
-            DisplayMap(3);
+            //DisplayMap(2);
+            //DisplayMap(3);
         }
 
         static void DisplayMap() //scale 1
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("X");
+            for(int ex = 0; ex < map.GetLength(1); ex++)
+            {
+                Console.Write("-");
+
+
+            }
+            Console.WriteLine("X");
+
             for (int y = 0; y < map.GetLength(0); y++)
             {
+                //border
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("X");
+
                 for (int x = 0; x < map.GetLength(1); x++)
                 {
                     char tile = map[y, x];
@@ -60,11 +74,25 @@ namespace TextBaseRPGMap_KatelynNicholson_2025_10_27
                             break;
                     }
                     Console.Write(tile);
+
+                    //reset background color
                     Console.BackgroundColor = ConsoleColor.Black;
                 }
-                //makes new line for y
-                Console.WriteLine();
+                //makes new line for y && border
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("X");
+
             }
+            //border
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("X");
+            for (int ex = 0; ex < map.GetLength(1); ex++) //* scale 
+            {
+                Console.Write("-");
+
+
+            }
+            Console.WriteLine("X");
         }
 
         static void DisplayMap(int scale) // scale of 2 and scale of 3 
