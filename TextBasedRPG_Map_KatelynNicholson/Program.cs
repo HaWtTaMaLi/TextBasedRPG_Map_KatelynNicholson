@@ -37,6 +37,18 @@ namespace TextBaseRPGMap_KatelynNicholson_2025_10_27
 
         static void DisplayMap() //scale 1
         {
+            //Legend
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("▒ = mountain");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("▓ = grass");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("░ = water");
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.WriteLine("⌠ = trees");
+            Console.BackgroundColor = ConsoleColor.Black;
+
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("X"); //Top Left Corner
             for(int ex = 0; ex < map.GetLength(1); ex++)
@@ -93,6 +105,18 @@ namespace TextBaseRPGMap_KatelynNicholson_2025_10_27
 
         static void DisplayMap(int scale) // scale of 2 and scale of 3 
         {
+            //Legend
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("▒ = mountain");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("▓ = grass");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("░ = water");
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.WriteLine("⌠ = trees");
+            Console.BackgroundColor = ConsoleColor.Black;
+
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("X"); //Top Left Corner
             for (int ex = 0; ex < map.GetLength(1) * scale; ex++)
