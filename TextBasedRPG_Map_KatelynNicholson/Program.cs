@@ -32,6 +32,7 @@ namespace TextBaseRPGMap_KatelynNicholson_2025_10_27
         {
             DisplayMap();
             DisplayMap(2);
+            Console.ReadKey();
             DisplayMap(3);
         }
 
